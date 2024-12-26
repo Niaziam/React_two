@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Onest:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer utilities {
+  .navItem::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -10px;
+    transform: translate(-50% ,-50%);
+    left: 50%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: orangered;
+  }
+  .navItem:hover.navItem::after{
+    width: 100%;
+    transition: 0.3s linear;
+  }
+}
